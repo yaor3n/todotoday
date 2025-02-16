@@ -17,11 +17,21 @@ body {
     background-color: #181825;
     padding: 20px 50px;
     color: #CDD6F4;
+    position: fixed; /* self explanitory */
+    top: 0; /* so it stays on top of viewport */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* overlaps on other stuff */
+    width: 100%; 
+    box-sizing: border-box; top: 0; /* makes sure padding included in width */
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
+    color: inherit; /* takes from banner */
+    text-decoration: none; /* removes underline */
+    transition: color 0.3s;
 }
 
 .nav-menu a {
@@ -36,6 +46,10 @@ body {
     color: #ca9ee6;
 }
 
+.logo:hover { /* didnt work cuz got space lul */
+    color: #ca9ee6;
+}
+
 .get-started-btn {
     background-color: #181825;
     color: #CDD6F4;
@@ -47,7 +61,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     box-shadow: none;
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
 }
 
 .get-started-btn:hover {
@@ -57,7 +71,7 @@ body {
 
 .welcome-section {
     text-align: center;
-    margin-top: 250px;
+    margin-top: 300px;
 }
 
 .welcome-section h1 {
@@ -69,7 +83,7 @@ body {
     text-align: left;
     padding-left: 50px;
     padding-right: 50px;
-    margin-top: 300px;
+    margin-top: 350px;
     text-align: justify;
 }
 
@@ -88,7 +102,7 @@ body {
     text-align: left;
     padding-left: 50px;
     padding-right: 50px;
-    margin-top: 200px;
+    margin-top: 350px;
     text-align: justify;
 }
 
@@ -107,3 +121,88 @@ body {
     scroll-margin-top: 150px;
 }
 
+.login-section {
+    color:#ca9ee6
+}
+
+.login-section {
+    background-color: #181825;
+    padding: 30px;
+    max-width: 800px;
+    margin: 50px auto;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 15px;
+}
+
+.login-container {
+    background-color: #ca9ee6;
+    max-width: 400px;
+    margin: 50px auto; /* centers horizontally */
+    margin-top: auto;
+    border-radius: 10px;
+    padding-bottom: 25px;
+    padding-right: 25px;
+    padding-left: 25px;
+    text-align: center;
+
+}
+
+label {
+    display: block; /* so no need use <br> */
+    color: #181825;
+    font-size: 23px;
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: bold;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    border: 1.5px solid #181825;
+    display: block;
+    font-size: 15px;
+    font-weight: 20px;
+}
+
+input:focus {
+    outline: 1.5px solid #f38ba8;
+}
+
+.login-btn {
+    background-color: #ffffff;
+    color: #181825; 
+    padding: 15px 32px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 3px solid #181825;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: none;
+    transition: all 0.5s ease;
+}
+
+.login-btn:hover {
+    background-color: #181825;
+    color: #ffffff;
+}
+.register-section {
+    margin-top: 35px;
+}
+
+.register-label {
+    font-size: 17px;
+}
+
+.register-label :hover {
+    color: #ffffff;
+    transition: 0.5s;
+}
