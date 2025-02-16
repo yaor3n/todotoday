@@ -12,6 +12,7 @@ body {
 
 .banner {
     display: flex;
+    max-width: 100%;
     justify-content: space-between;
     align-items: center;
     background-color: #181825;
@@ -32,6 +33,20 @@ body {
     color: inherit; /* takes from banner */
     text-decoration: none; /* removes underline */
     transition: color 0.3s;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+    }
 }
 
 .nav-menu a {
@@ -128,13 +143,20 @@ body {
 .login-section {
     background-color: #181825;
     padding: 30px;
-    max-width: 800px;
-    margin: 50px auto;
-    padding-top: 150px;
+    max-width: 700px;
+    max-height: 550px;
+    margin: 120px auto;
+    padding-top: 50px;
     padding-bottom: 150px;
     padding-right: 25px;
     padding-left: 25px;
     border-radius: 15px;
+    text-align: center;
+}
+
+.login-section h1 {
+    font-size: 40px;
+    color: #ca9ee6;
 }
 
 .login-container {
@@ -143,7 +165,8 @@ body {
     margin: 50px auto; /* centers horizontally */
     margin-top: auto;
     border-radius: 10px;
-    padding-bottom: 25px;
+    padding-top: 35px;
+    padding-bottom: 35px;
     padding-right: 25px;
     padding-left: 25px;
     text-align: center;
@@ -179,7 +202,6 @@ input:focus {
     background-color: #ffffff;
     color: #181825; 
     padding: 15px 32px;
-    margin-top: 10px;
     font-size: 16px;
     font-weight: bold;
     border: 3px solid #181825;
@@ -205,4 +227,73 @@ input:focus {
 .register-label :hover {
     color: #ffffff;
     transition: 0.5s;
+}
+
+.register-section a {
+    color: purple;
+}
+
+.signup-section {
+    background-color: #181825;
+    padding: 30px;
+    max-width: 700px;
+    max-height: 550px;
+    margin: 120px auto;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.signup-section {
+    font-size: 25px;
+    color: #ca9ee6;
+}
+
+.signup-container {
+    background-color: #ca9ee6;
+    max-width: 400px;
+    margin: 50px auto;
+    margin-top: auto;
+    border-radius: 10px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-right: 25px;
+    padding-left: 25px;
+    text-align: center;
+}
+
+.show-password-label {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 10px auto;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.show-password-label input[type="checkbox"] {
+    transform: translateY(11px); /* idk why it wasnt aligned w label by default */
+}
+
+.signup-btn {
+    background-color: #ffffff;
+    color: #181825; 
+    padding: 15px 32px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 3px solid #181825;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: none;
+    transition: all 0.5s ease;
+}
+
+.signup-btn:hover {
+    background-color: #181825;
+    color: #ffffff;
 }
