@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </section>
     </div>
 
-    <script src="stuff/script.js">
+    <script src="stuff/login.js">
             // Check if PHP session has username
     <?php if (!empty($_SESSION["username"])): ?>
         localStorage.setItem("loggedInUser", "<?php echo htmlspecialchars($_SESSION['username']); ?>");

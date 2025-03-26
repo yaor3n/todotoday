@@ -75,6 +75,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </section>
     </main>
 
-    <script src="stuff/script.js"></script>
+    <script src="stuff/login.js"></script>
 </body>
 </html>
