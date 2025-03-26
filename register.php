@@ -48,26 +48,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <main> <!--apparently its better to have a main tag-->
-        <section class="signup-section">
-            <h1>Sign Up</h1>
-            <div class="signup-container">
-                <form action="register.php" method="POST">
-                    <label for="username">New Username:</label>
-                    <input for="text" id="username" name="username" required>
-                    <label for="passowrd">New Password:</label>
-                    <input type="password" id="password" name="password" required>
+        <div class="signup-container">
+            <h1><u>Sign Up</u></h1>
+            <form action="register.php" method="POST">
+                <label for="username">New Username:</label>
+                <input for="text" id="username" name="username" required>
+                <label for="passowrd">New Password:</label>
+                <input type="password" id="password" name="password" required>
 
-                    <?php if (isset($error)): ?>
-                        <p class="signup-error"><?php echo $error; ?></p>
-                    <?php endif; ?>
+                <?php if (isset($error)): ?>
+                    <p class="signup-error"><?php echo $error; ?></p>
+                <?php endif; ?>
 
-                    <label class="show-password-label">
-                        <input type="checkbox" id="show-password">Show Password
-                    </label>
-
-                    <button type="submit" class="signup-btn">Sign Up</button>
-                </form>
-            </div>
+                <label class="show-password-label">
+                    <input type="checkbox" id="show-password">Show Password
+                </label>
+                    
+                <button type="submit" class="signup-btn">Sign Up</button>
+            </form>
+                    
+            <section class="login-section">
+                <label class="login-label">Already have an account? <a href="login.php">Log In</a></label>
+            </section>
+        </div>
 
         </section>
     </main>

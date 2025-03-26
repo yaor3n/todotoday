@@ -1,305 +1,427 @@
 html {
-    scroll-behavior: smooth;  /* This enables smooth scrolling */
+  scroll-behavior: smooth; /* enables smooth scrolling */
 }
 
-
 body {
-    margin: 0; /*margin and padding of body needa be 0 if not banner wont fill edges */
-    padding: 0;
-    background-color: #1e1e2e;
-    font-family: "Inter", system-ui, sans-serif;
+  margin: 0; /*margin and padding of body needa be 0 if not banner wont fill edges */
+  padding: 0;
+  background-color: #1e1e2e;
+  font-family: "Inter", system-ui, sans-serif;
+  padding: 80px; /* push everything down abit cuz banner blocking */
 }
 
 .banner {
-    display: flex;
-    max-width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #181825;
-    padding: 20px 50px;
-    color: #CDD6F4;
-    position: fixed; /* self explanitory */
-    top: 0; /* so it stays on top of viewport */
-    left: 0;
-    right: 0;
-    z-index: 1000; /* overlaps on other stuff */
-    width: 100%; 
-    box-sizing: border-box; top: 0; /* makes sure padding included in width */
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #11111b;
+  padding: 20px 50px;
+  color: #cdd6f4;
+  position: fixed; /* self explanitory */
+  top: 0; /* so it stays on top of viewport */
+  left: 0;
+  right: 0;
+  z-index: 1000; /* overlaps on other stuff */
+  width: 100%;
+  box-sizing: border-box;
+  top: 0; /* makes sure padding included in width */
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: inherit; /* takes from banner */
-    text-decoration: none; /* removes underline */
-    transition: color 0.3s;
+  font-size: 24px;
+  font-weight: bold;
+  color: inherit; /* takes from banner */
+  text-decoration: none; /* removes underline */
+  transition: color 0.3s;
 }
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
-    .banner {
-        flex-direction: column;
-        text-align: center;
-    }
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .nav-menu {
-        flex-direction: column;
-        gap: 10px;
-        padding-top: 10px;
-    }
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+  }
 }
 
 .nav-menu a {
-    color: #CDD6F4;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-    transition: color 0.3s;
+  color: #cdd6f4;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  transition: color 0.3s;
 }
 
 .nav-menu a:hover {
-    color: #ca9ee6;
+  color: #ca9ee6;
 }
 
-.logo:hover { /* didnt work cuz got space lul */
-    color: #ca9ee6;
+.logo:hover {
+  /* didnt work cuz got space lul */
+  color: #ca9ee6;
 }
 
 .get-started-btn {
-    background-color: #181825;
-    color: #CDD6F4;
-    padding: 15px 32px;
-    font-size: 16px;
-    font-weight: bold;
-    border: 3px solid #ca9ee6;
-    outline: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: none;
-    transition: all 0.5s ease;
+  background-color: #11111b;
+  color: #cdd6f4;
+  padding: 15px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 3px solid #ca9ee6;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.5s ease;
 }
 
 .get-started-btn:hover {
-    background-color: #ca9ee6; 
-    color: #181825;
+  background-color: #ca9ee6;
+  color: #181825;
 }
 
 .welcome-section {
-    text-align: center;
-    margin-top: 300px;
+  text-align: center;
+  margin-top: 250px;
 }
 
 .welcome-section h1 {
-    font-size: 50px;
-    color: #ca9ee6;
+  font-size: 50px;
+  color: #ca9ee6;
 }
 
 .about-section {
-    text-align: left;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-top: 350px;
-    text-align: justify;
+  text-align: left;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 350px;
+  text-align: justify;
 }
 
 .about-section h1 {
-    color:#CDD6F4;
-    font-size: 25px;
+  color: #cdd6f4;
+  font-size: 25px;
 }
 
 .about-section p {
-    color:#B9C2DE;
-    font-size: 20px;
-    line-height: 1.6;
+  color: #b9c2de;
+  font-size: 20px;
+  line-height: 1.6;
 }
 
 .features-section {
-    text-align: left;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-top: 350px;
-    text-align: justify;
+  text-align: left;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 350px;
+  text-align: justify;
 }
 
-.features-section h1, h2 {
-    color:#CDD6F4;
-    font-size: 25px;
+.features-section h1,
+h2 {
+  color: #cdd6f4;
+  font-size: 25px;
 }
 
 .feature p {
-    color:#B9C2DE;
-    font-size: 20px;
-    line-height: 1.6;
+  color: #b9c2de;
+  font-size: 20px;
+  line-height: 1.6;
 }
 
-.about-section, .features-section {
-    scroll-margin-top: 150px;
-}
-
-.login-section {
-    color:#ca9ee6
-}
-
-.login-section {
-    background-color: #181825;
-    padding: 30px;
-    max-width: 700px;
-    max-height: 550px;
-    margin: 120px auto;
-    padding-top: 50px;
-    padding-bottom: 150px;
-    padding-right: 25px;
-    padding-left: 25px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.login-section h1 {
-    font-size: 40px;
-    color: #ca9ee6;
+.about-section,
+.features-section {
+  scroll-margin-top: 150px;
 }
 
 .login-container {
-    background-color: #ca9ee6;
-    max-width: 400px;
-    margin: 50px auto; /* centers horizontally */
-    margin-top: auto;
-    border-radius: 10px;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    padding-right: 25px;
-    padding-left: 25px;
-    text-align: center;
+  background-color: #ca9ee6;
+  max-width: 400px;
+  margin: 50px auto; /* centers horizontally */
+  margin-top: 150px;
+  margin-bottom: 150px; /* need top and bottom if not shit will stick to top n bot*/
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 35px;
+  padding-right: 25px;
+  padding-left: 25px;
+  text-align: center;
+}
 
+.login-container h1 {
+  font-size: 45px;
 }
 
 label {
-    display: block; /* so no need use <br> */
-    color: #181825;
-    font-size: 23px;
-    font-family: "Inter", system-ui, sans-serif;
-    font-weight: bold;
-    padding-bottom: 20px;
-    align-items: center;
+  display: block; /* so no need use <br> */
+  color: #181825;
+  font-size: 23px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: bold;
+  padding-bottom: 20px;
+  align-items: center;
 }
 
 input {
-    width: 95%;
-    padding: 10px;
-    margin-bottom: 25px;
-    border-radius: 5px;
-    border: 1.5px solid #181825;
-    display: block;
-    font-size: 15px;
-    font-weight: 20px;
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  border: 1.5px solid #181825;
+  display: block;
+  font-size: 15px;
+  font-weight: 20px;
 }
 
 input:focus {
-    outline: 1.5px solid #f38ba8;
+  outline: 1.5px solid #f38ba8;
 }
 
 .login-btn {
-    background-color: #ffffff;
-    color: #181825; 
-    padding: 15px 32px;
-    font-size: 16px;
-    font-weight: bold;
-    border: 3px solid #181825;
-    outline: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: none;
-    transition: all 0.5s ease;
+  background-color: #ffffff;
+  color: #181825;
+  padding: 15px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 3px solid #181825;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.5s ease;
 }
 
 .login-btn:hover {
-    background-color: #181825;
-    color: #ffffff;
+  background-color: #181825;
+  color: #ffffff;
 }
 .register-section {
-    margin-top: 35px;
+  margin-top: 35px;
 }
 
 .register-label {
-    font-size: 17px;
+  font-size: 17px;
 }
 
-.register-label :hover {
-    color: #ffffff;
-    transition: 0.5s;
+.register-label a:hover {
+  color: #ffffff;
+  transition: 0.5s;
 }
 
 .register-section a {
-    color: purple;
-}
-
-.signup-section {
-    background-color: #181825;
-    padding: 30px;
-    max-width: 700px;
-    max-height: 550px;
-    margin: 120px auto;
-    padding-top: 50px;
-    padding-bottom: 150px;
-    padding-right: 25px;
-    padding-left: 25px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.signup-section {
-    font-size: 25px;
-    color: #ca9ee6;
+  color: purple;
 }
 
 .signup-container {
-    background-color: #ca9ee6;
-    max-width: 400px;
-    margin: 50px auto;
-    margin-top: auto;
-    border-radius: 10px;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    padding-right: 25px;
-    padding-left: 25px;
-    text-align: center;
+  background-color: #ca9ee6;
+  max-width: 400px;
+  margin: 50px auto;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 35px;
+  padding-right: 25px;
+  padding-left: 25px;
+  text-align: center;
+}
+
+.signup-container h1 {
+  font-size: 45px;
 }
 
 .show-password-label {
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 10px auto;
-    gap: 8px;
-    white-space: nowrap;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: 10px auto;
+  gap: 8px;
+  white-space: nowrap;
 }
 
 .show-password-label input[type="checkbox"] {
-    transform: translateY(11px); /* idk why it wasnt aligned w label by default */
+  transform: translateY(11px); /* idk why it wasnt aligned w label by default */
 }
 
 .signup-btn {
-    background-color: #ffffff;
-    color: #181825; 
-    padding: 15px 32px;
-    font-size: 16px;
-    font-weight: bold;
-    border: 3px solid #181825;
-    outline: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: none;
-    transition: all 0.5s ease;
+  background-color: #ffffff;
+  color: #181825;
+  padding: 15px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 3px solid #181825;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.5s ease;
 }
 
 .signup-btn:hover {
-    background-color: #181825;
-    color: #ffffff;
+  background-color: #181825;
+  color: #ffffff;
 }
 
 .signup-error {
-    font-size:15px;
-    font-weight: bold;
-    color: red;
+  font-size: 15px;
+  font-weight: bold;
+  color: red;
+}
+
+.singup-container {
+  background-color: #ca9ee6;
+  max-width: 400px;
+  margin: 50px auto;
+  margin-top: auto;
+  border-radius: 10px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-right: 25px;
+  padding-left: 25px;
+  text-align: center;
+}
+
+.login-section {
+  margin-top: 35px;
+}
+
+.login-label {
+  font-size: 17px;
+}
+
+.login-label a:hover {
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.login-error {
+  font-size: 15px;
+  font-weight: bold;
+  color: red;
+}
+
+.align-mm-btns {
+  display: flex;
+  flex-wrap: wrap; /* Allows buttons to wrap onto new rows */
+  gap: 20px 40px;
+  justify-content: center;
+  padding: 50px;
+  background-color: #11111b;
+  border-radius: 15px;
+  border: 5px solid #ca9ee6;
+}
+.dashboard-banner {
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #11111b;
+  padding: 20px 50px;
+  color: #cdd6f4;
+  position: fixed; /* self explanitory */
+  top: 0; /* so it stays on top of viewport */
+  left: 0;
+  right: 0;
+  z-index: 1000; /* overlaps on other stuff */
+  width: 100%;
+  box-sizing: border-box;
+  top: 0; /* makes sure padding included in width */
+}
+
+.welcome-user-label {
+  color: #cdd6f4;
+}
+
+.main-menu-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px); /* 100% viewport height minus navbar height */
+}
+
+.mm-btn {
+  background-color: #11111b;
+  color: #cdd6f4;
+  padding: 25px 32px;
+  font-size: 35px;
+  font-weight: bold;
+  border: 5px solid #ca9ee6;
+  outline: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.mm-btn:hover {
+  background-color: #ca9ee6;
+  color: #181825;
+}
+
+.timers-section {
+  margin: 20px auto;
+  padding: 20px auto;
+  color: #ca9ee6;
+}
+
+.stopwatch-btn,
+.pomodoro-timer-btn {
+  background-color: #181825;
+  color: #cdd6f4;
+  padding: 25px 32px;
+  font-size: 35px;
+  font-weight: bold;
+  border: 5px solid #ca9ee6;
+  outline: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.5s ease;
+  position: relative;
+  align-items: center;
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  color: #ca9ee6;
+  font-weight: bold;
+  background-color: #181818;
+  padding-bottom: 25px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border: 5px solid #ca9ee6;
+}
+
+.timer-container h2 {
+  font-size: 50px;
+}
+
+#timer {
+  font-size: 100px;
+  text-align: center;
+  font-family: Courier;
+}
+
+.quicktimer-btn-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  column-gap: 40px;
+}
+
+.quicktimer-btn-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  column-gap: 40px;
 }
